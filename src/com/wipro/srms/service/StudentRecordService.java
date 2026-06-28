@@ -173,7 +173,7 @@ public class StudentRecordService {
         return total / count;
     }
  // Generate Student Summary
-    public void generateStudentSummary(String studentId,
+    public String generateStudentSummary(String studentId,
                                        int semester)
             throws InvalidStudentException,
                    RecordNotFoundException {
@@ -204,5 +204,6 @@ public class StudentRecordService {
         System.out.println("Semester             : " + semester);
         System.out.printf("Semester Average     : %.2f%n", average);
         System.out.printf("Attendance           : %.2f%%%n", attendance);
+		return studentId;
     }
 }
